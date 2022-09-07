@@ -20,8 +20,8 @@ function DrawerNavigation() {
       },
     }}
     >
-      <Drawer.Screen name="Próximos eventos" component={TabsPage} options={{ drawerLabel: 'Inicio' }}/>
-      <Drawer.Screen name="Perfil" component={ProfilePage} options={{ drawerLabel: 'Perfil' }}/>
+      <Drawer.Screen name="Próximos eventos" component={TabsPage} options={{ drawerLabel: 'Inicio', drawerInactiveTintColor:'white', drawerActiveTintColor:'#009798' }}/>
+      <Drawer.Screen name="Perfil" component={ProfilePage} options={{ drawerLabel: 'Perfil', drawerInactiveTintColor:'white', drawerActiveTintColor:'#009798' }}/>
     </Drawer.Navigator>
   );
 }
