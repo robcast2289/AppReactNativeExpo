@@ -53,8 +53,8 @@ const styles = StyleSheet.create({
     },
     image:{
         width:'100%', 
-        height:180, 
-        borderRadius:8
+        height:180,
+        borderRadius:8,
     },
     titleEvent:{
         fontSize:20, 

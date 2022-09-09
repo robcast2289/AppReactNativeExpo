@@ -1,21 +1,13 @@
 import react, { useState, useEffect } from "react";
 import { FlatList, View, Text, Image, Button, StyleSheet } from "react-native";
 import EventoCardList, { Separador } from "../components/EventoCardList";
-
-import EventoPage from "./EventoPage";
-
-const apiURL = 'https://eventos.galileo.edu/api/eventoslogin';
+import { EventosLogin } from "../services/eventos";
 
 const HomePage = ({ navigation }) => {
     const [events, setEvent] = useState([]);
 
     useEffect(()=>{
-        fetch(apiURL)
-        .then(res => res.json())
-        .then(response => {
-            const eventos = response.Eventos;
-            setEvent(eventos);
-        })
+        EventosLogin().then(events=>setEvent(events));
     }, [])
 
     return (        

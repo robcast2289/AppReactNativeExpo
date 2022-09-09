@@ -2,9 +2,8 @@ import react from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 
-import HomePage from '../pages/HomePage';
-import ProfilePage from '../pages/ProfilePage';
 import TabsPage from '../pages/TabsPage';
+import ProfilePage from '../pages/ProfilePage';
 
 
 const Drawer = createDrawerNavigator();
