@@ -27,7 +27,7 @@ const EventoCardList = ({singleEvent, navigation}) => {
         onPress={() => navigation.navigate('Evento',{singleEvent})}
         >
             <EventoCard {...{singleEvent}} />
-        </TouchableHighlight >
+        </TouchableHighlight>
     </Swipeable>
   )
 }

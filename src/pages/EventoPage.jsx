@@ -23,7 +23,7 @@ const EventoPage = (props) => {
 
   return (
     <ScrollView>
-    <CustomHead {...props}/>
+    {/* <CustomHead {...props}/> */}
     <View>
         <EventoCard {...{singleEvent}}/>    
         {/* Incluye */}

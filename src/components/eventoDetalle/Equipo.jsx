@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, FlatList, Image } from 'react-native'
 import Card from '../card/Card';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
@@ -12,9 +12,28 @@ const Equipo = ({Personal}) => {
         </View>
         <View style={styles.separador}/>
         <View>
-            {
+            <FlatList
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+            decelerationRate={0}
+            snapToInterval={500}
+            data={Personal}
+            keyExtractor={(item)=>item}
+            renderItem={(item,index)=>{
+                console.log(item);
+                return(
+                    <View key={item.item.Correlativo} style={{alignItems:"center"}}>
+                        <Image source={{uri:`https://eventos.galileo.edu${item.item.FOTO}`}} style={{width:150, height:200}}/>                        
+                        <Text>{item.item.Nombre}</Text>
+                    </View>
+                )
+            }}
+            >
+
+            </FlatList>
+            {/* {
                 Personal?.map(ev=><Text key={ev.Correlativo} style={{fontSize:12}}>{ev.Nombre}</Text>)
-            }
+            } */}
         </View>
     </Card>
   )
