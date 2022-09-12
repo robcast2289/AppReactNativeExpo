@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableHighlight  } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
 import EventoCard from './EventoCard';
@@ -23,11 +23,11 @@ const EventoCardList = ({singleEvent, navigation}) => {
     <Swipeable
         renderRightActions={rightActions}
     >
-        <TouchableOpacity
+        <TouchableHighlight 
         onPress={() => navigation.navigate('Evento',{singleEvent})}
         >
             <EventoCard {...{singleEvent}} />
-        </TouchableOpacity>
+        </TouchableHighlight >
     </Swipeable>
   )
 }

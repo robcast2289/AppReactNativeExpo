@@ -7,6 +7,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import Incluye from '../components/eventoDetalle/Incluye';
 import Equipo from '../components/eventoDetalle/Equipo';
 import { DetalleLogin } from '../services/eventos';
+import CustomHead from '../components/CustomHead';
 
 const apiURL = 'https://eventos.galileo.edu/api/detallelogin/';
 
@@ -22,6 +23,7 @@ const EventoPage = (props) => {
 
   return (
     <ScrollView>
+    <CustomHead {...props}/>
     <View>
         <EventoCard {...{singleEvent}}/>    
         {/* Incluye */}
